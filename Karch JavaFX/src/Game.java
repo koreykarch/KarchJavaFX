@@ -21,9 +21,8 @@ public class Game extends GridPane {
     ArrayList<ImageView> guessesRight;
 
 
-
     Label winMSG;
-   Text scoreCounter;
+    Text scoreCounter;
     ImageView burger = new ImageView("BURGER.jpg");
 
     ImageView coke = new ImageView("COKE.jpg");
@@ -53,7 +52,7 @@ public class Game extends GridPane {
     public Game() {
 
         gridPane = new GridPane();
-    //Basically, I created an arrayList for the ImageViews to hold the images
+        //Basically, I created an arrayList for the ImageViews to hold the images
         //And I created a guesses ArrayList which holds up to two ImageView objects based on onMouseClickEvent
         //Once two ImageViews are added to this list, it checks if the images are the same in the isMatch() method
         //If two ImageViews get added, they are added to guessedRight list
@@ -84,7 +83,7 @@ public class Game extends GridPane {
         imageList.add(taco2);
 
 
-        for (int i=0; i<20; i++) {
+        for (int i = 0; i < 20; i++) {
             imageList.get(i).setOnMouseClicked(event);
         }
 
@@ -107,7 +106,7 @@ public class Game extends GridPane {
                 }
             }
         }
-            //Message for winning
+        //Message for winning
         winMSG = new Label("You win!");
         winMSG.setFont(Font.font("Verdana", 22));
         winMSG.setTextFill(Color.RED);
@@ -116,7 +115,7 @@ public class Game extends GridPane {
         winMSG.setTranslateY(-200);
 
         //Score label
-        scoreCounter = new Text("Score: " + guessesRight.size()/2 + " /10");
+        scoreCounter = new Text("Score: " + guessesRight.size() / 2 + " /10");
         scoreCounter.setFont(Font.font("Verdana", 20));
         scoreCounter.setFill(Color.RED);
 
@@ -131,13 +130,13 @@ public class Game extends GridPane {
 
 
     }
+
     //Event for uncovering
-    EventHandler<MouseEvent> event = new EventHandler<MouseEvent>()
-    {
+    EventHandler<MouseEvent> event = new EventHandler<MouseEvent>() {
         @Override
-        public void handle(final MouseEvent ME ) {
+        public void handle(final MouseEvent ME) {
             Object obj = ME.getSource();
-            if (!guessesRight.contains((ImageView) obj)){
+            if (!guessesRight.contains((ImageView) obj)) {
                 FadeTransition uncover = new FadeTransition(Duration.seconds(.5));
                 uncover.setFromValue(0);
                 uncover.setToValue(1);
@@ -164,7 +163,7 @@ public class Game extends GridPane {
                         guesses.get(1).setOpacity(1);
                         guesses.get(0).setOpacity(1);
                         guesses.clear();
-                        scoreCounter.setText("Score: " + guessesRight.size()/2 + " /10");
+                        scoreCounter.setText("Score: " + guessesRight.size() / 2 + " /10");
                         System.out.println("List size: " + guesses.size());
                     }
                     else {
@@ -201,19 +200,19 @@ public class Game extends GridPane {
         if ((image1 == this.cookie && image2 == this.cookie2) || (image1 == this.cookie2 && image2 == this.cookie)) {
             return true;
         }
-        if ((image1 == this.pie && image2 == this.pie2) || (image1 == this.pie2 && image2 == this.pie)){
+        if ((image1 == this.pie && image2 == this.pie2) || (image1 == this.pie2 && image2 == this.pie)) {
             return true;
         }
         if ((image1 == this.fries && image2 == this.fries2) || (image1 == this.fries2 && image2 == this.fries)) {
             return true;
         }
-        if ((image1 == this.coke && image2 == this.coke2) || (image1 == this.coke2 && image2 == this.coke)){
+        if ((image1 == this.coke && image2 == this.coke2) || (image1 == this.coke2 && image2 == this.coke)) {
             return true;
         }
-        if ((image1 == this.icecream && image2 == this.icecream2) || (image1 == this.icecream2 && image2 == this.icecream)){
+        if ((image1 == this.icecream && image2 == this.icecream2) || (image1 == this.icecream2 && image2 == this.icecream)) {
             return true;
         }
-        if ((image1 == this.shake && image2 == this.shake2) || (image1 == this.shake2 && image2 == this.shake)){
+        if ((image1 == this.shake && image2 == this.shake2) || (image1 == this.shake2 && image2 == this.shake)) {
             return true;
         }
         if ((image1 == this.pizza && image2 == this.pizza2) || (image1 == this.pizza2 && image2 == this.pizza)) {
@@ -221,8 +220,9 @@ public class Game extends GridPane {
         }
         return false;
     }
+
     public void fadeBoard() {
-        for (int i=0; i<20; i++) {
+        for (int i = 0; i < 20; i++) {
             FadeTransition gameFade = new FadeTransition(Duration.seconds(1), gridPane.getChildren().get(i));
             gameFade.setFromValue(1);
             gameFade.setToValue(0);

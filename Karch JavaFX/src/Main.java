@@ -41,10 +41,10 @@ public class Main extends Application {
         // Labels for Course information
         Label courseName = new Label("Programming Principles II | CS1302/09");
         courseName.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 18));
-            //Will display due date
+        //Will display due date
         Label dueDate = new Label("March 22, 2018");
         dueDate.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 18));
-    //Displays professor's name
+        //Displays professor's name
         Label profName = new Label("Prof. Carlos A. Cepeda Mora");
         profName.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 18));
 
@@ -111,7 +111,7 @@ public class Main extends Application {
             //Add the replayButton to the top of our rootPane
             rootPane.setTop(replayGameButton);
             rootPane.setAlignment(replayGameButton, (Pos.TOP_CENTER)); //Position the button
-                //if the Reset Button has not been pressed, set rootPane center to game Pane
+            //if the Reset Button has not been pressed, set rootPane center to game Pane
             if (wasGameReset.get() == false) {
                 rootPane.setCenter(game.getPane());
             }
