@@ -1,0 +1,10 @@
+WARNING - 20:56:06: First conversion pass
+ERROR - 20:56:06: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 20:56:28: Convert 
+WARNING - 20:56:28: First conversion pass
+ERROR - 20:56:28: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 21:05:28: First conversion pass
+ERROR - 21:05:28: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 21:08:25: First conversion pass
+ERROR - 21:08:25: java.io.FileNotFoundException: /Assign2Program3/.classpath (No such file or directory)
+ERROR - 21:08:25: java.io.FileNotFoundException: /Assign2Program3/.classpath (No such file or directory)
